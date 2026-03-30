@@ -13,46 +13,85 @@ a{text-decoration:none;color:inherit}
 .hd{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);padding:36px 20px 28px;text-align:center;border-bottom:3px solid #ffd43b}
 .hd h1{font-size:28px;font-weight:900;color:#ffd43b}
 .hd p{font-size:13px;color:#6a7090;margin-top:4px}
-
 .ct{max-width:640px;margin:0 auto;padding:20px 16px}
 
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
-.sb{background:#1a1a2e;border-radius:14px;padding:18px;border:1px solid #2a2a4a}
-.sb .st{font-size:12px;color:#6a7090;font-weight:700;margin-bottom:10px;letter-spacing:1px}
+/* 탭 */
+.tabs{display:flex;gap:4px;margin-bottom:20px;background:#1a1a2e;border-radius:12px;padding:4px;border:1px solid #2a2a4a}
+.tab{flex:1;text-align:center;padding:10px;border-radius:10px;font-size:14px;font-weight:700;color:#5a6080;cursor:pointer}
+.tab.active{background:#ffd43b;color:#1a1a2e}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* 통계 */
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.sb{background:#1a1a2e;border-radius:14px;padding:16px;border:1px solid #2a2a4a}
+.sb .st{font-size:11px;color:#6a7090;font-weight:700;margin-bottom:8px;letter-spacing:1px}
 .sn{display:flex;gap:20px}
 .si{text-align:center}
-.si .n{font-size:24px;font-weight:900;color:#ffd43b;line-height:1}
-.si .l{font-size:11px;color:#5a6080;margin-top:4px}
+.si .n{font-size:22px;font-weight:900;color:#ffd43b;line-height:1}
+.si .l{font-size:11px;color:#5a6080;margin-top:3px}
 
-.sl{font-size:14px;font-weight:900;color:#ffd43b;margin-bottom:10px;padding-left:4px}
-.plist{display:flex;flex-direction:column;gap:6px;margin-bottom:24px}
-.pr{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:#1a1a2e;border-radius:12px;border:1px solid #2a2a4a}
+/* 제품 목록 */
+.sl{font-size:13px;font-weight:900;color:#ffd43b;margin-bottom:8px;padding-left:4px}
+.plist{display:flex;flex-direction:column;gap:5px;margin-bottom:20px}
+.pr{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:#1a1a2e;border-radius:12px;border:1px solid #2a2a4a}
 .pr.cl{cursor:pointer;transition:all .15s}
 .pr.cl:hover{border-color:#ffd43b;background:#1e1e35}
-.pl{display:flex;align-items:center;gap:10px}
-.pe{font-size:18px}
-.pn{font-size:14px;font-weight:700}
+.pl{display:flex;align-items:center;gap:8px}
+.pe{font-size:16px}
+.pn{font-size:13px;font-weight:700}
 .pn.dm{color:#5a6080}
-.prr{display:flex;align-items:center;gap:6px;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
-.ar{color:#ffd43b;font-weight:700;font-size:14px}
+.prr{display:flex;align-items:center;gap:5px;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
+.ar{color:#ffd43b;font-weight:700;font-size:13px}
 
-.b{padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700;white-space:nowrap}
+.b{padding:2px 8px;border-radius:8px;font-size:10px;font-weight:700;white-space:nowrap}
 .b-done{background:#1a2e1a;color:#68d391}
 .b-plan{background:#2e2a1a;color:#ffd43b}
 .b-up{background:#1a1a2e;color:#63b3ed;border:1px solid #2a4a6a}
 .b-sch{background:#1a1a2e;color:#a0a0b0;border:1px solid #2a2a4a}
 
-.ft{text-align:center;padding:24px 20px;color:#2a2a4a;font-size:11px}
+/* 제품 발굴 */
+.disc-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.disc-header .title{font-size:14px;font-weight:900;color:#ffd43b}
+.disc-header .updated{font-size:11px;color:#5a6080}
+
+.disc-filters{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.disc-filter{padding:5px 12px;border-radius:16px;font-size:12px;font-weight:700;background:#1a1a2e;color:#6a7090;border:1px solid #2a2a4a;cursor:pointer}
+.disc-filter.active{background:#ffd43b;color:#1a1a2e;border-color:#ffd43b}
+
+.disc-group{margin-bottom:16px}
+.disc-source{font-size:13px;font-weight:700;color:#8892b0;margin-bottom:8px;padding-left:2px}
+
+.disc-item{background:#1a1a2e;border-radius:10px;padding:12px 14px;margin-bottom:6px;border:1px solid #2a2a4a}
+.disc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.disc-name{font-size:14px;font-weight:700;color:#e0e0e0}
+.disc-price{font-size:13px;font-weight:900;color:#ff6b6b}
+.disc-why{font-size:12px;color:#8892b0;margin-bottom:8px}
+.disc-tags{display:flex;gap:5px;flex-wrap:wrap}
+.disc-tag,.disc-viral{padding:2px 8px;border-radius:8px;font-size:10px;font-weight:700}
+.type-reels{background:#2a1a3e;color:#b388ff;padding:2px 8px;border-radius:8px;font-size:10px;font-weight:700}
+.type-feed{background:#1a2e2a;color:#69f0ae;padding:2px 8px;border-radius:8px;font-size:10px;font-weight:700}
+
+.ft{text-align:center;padding:20px;color:#2a2a4a;font-size:11px}
 </style>
 </head>
 <body>
 
 <div class="hd">
   <h1>🏠 템룸</h1>
-  <p>@temroom_pick · 2026-03-30 17:08</p>
+  <p>@temroom_pick · 2026-03-30 18:28</p>
 </div>
 
 <div class="ct">
+
+<!-- 탭 -->
+<div class="tabs">
+  <div class="tab active" id="tab-pkg" onclick="switchTab('pkg')">📦 패키지</div>
+  <div class="tab" id="tab-disc" onclick="switchTab('disc')">🔍 제품발굴</div>
+</div>
+
+<!-- 패키지 탭 -->
+<div class="tab-content active" id="content-pkg">
 
 <div class="stats">
   <div class="sb">
@@ -73,24 +112,224 @@ a{text-decoration:none;color:inherit}
 
 <div class="sl">제품 목록</div>
 <div class="plist">
-<a href="speaker_fullpackage_260327.html" class="pr cl">
-  <div class="pl"><span class="pe">🛒</span><span class="pn">다이소 블루투스 LED 스피커</span></div>
-  <div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-up">릴스 업로드</span><span class="ar">→</span></div>
-</a><a href="hera_fullpackage_260329.html" class="pr cl">
-  <div class="pl"><span class="pe">💄</span><span class="pn">헤라 립 글로스 세트</span></div>
-  <div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-sch">릴스 03/31</span><span class="ar">→</span></div>
-</a><a href="vacuum_fullpackage_260330.html" class="pr cl">
-  <div class="pl"><span class="pe">🛒</span><span class="pn">다이소 진공 저장 용기</span></div>
-  <div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-sch">릴스 04/02</span><span class="ar">→</span></div>
-</a><div class="pr">
-  <div class="pl"><span class="pe">🍽️</span><span class="pn dm">춘식이 핸들플레이트</span></div>
-  <div class="prr"><span class="b b-plan">패키지 예정</span><span class="b b-sch">피드 04/04</span></div>
+<a href="speaker_fullpackage_260327.html" class="pr cl"><div class="pl"><span class="pe">🛒</span><span class="pn">다이소 블루투스 LED 스피커</span></div><div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-up">릴스 업로드</span><span class="ar">→</span></div></a><a href="hera_fullpackage_260329.html" class="pr cl"><div class="pl"><span class="pe">💄</span><span class="pn">헤라 립 글로스 세트</span></div><div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-sch">릴스 03/31</span><span class="ar">→</span></div></a><a href="vacuum_fullpackage_260330.html" class="pr cl"><div class="pl"><span class="pe">🛒</span><span class="pn">다이소 진공 저장 용기</span></div><div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-sch">릴스 04/02</span><span class="ar">→</span></div></a><div class="pr"><div class="pl"><span class="pe">🍽️</span><span class="pn dm">춘식이 핸들플레이트</span></div><div class="prr"><span class="b b-plan">패키지 예정</span><span class="b b-sch">피드 04/04</span></div></div>
 </div>
+
+</div>
+
+<!-- 제품 발굴 탭 -->
+<div class="tab-content" id="content-disc">
+
+<div class="disc-header">
+  <div class="title">🔍 제품 발굴</div>
+  <div class="updated">업데이트: 2026-03-30</div>
+</div>
+
+<div class="disc-filters">
+  <div class="disc-filter active" onclick="filterDisc('all')">전체</div>
+  <div class="disc-filter" onclick="filterDisc('릴스')">릴스용</div>
+  <div class="disc-filter" onclick="filterDisc('피드')">피드용</div>
+</div>
+
+<div class="disc-group"><div class="disc-source">🛒 다이소</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">VT 리들샷 100 앰플</span>
+    <span class="disc-price">3,000원</span>
+  </div>
+  <div class="disc-why">3만원짜리가 3천원. 아직도 품절 대란</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
+    <span class="disc-viral" style="background:#ff444420;color:#ff4444;">품절대란</span>
+  </div>
+</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">저소음 블루투스 키보드</span>
+    <span class="disc-price">5,000원</span>
+  </div>
+  <div class="disc-why">3월 신상. 아이패드 연결 가능. 품절 중</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#2196f320;color:#2196f3;">IT</span>
+    <span class="disc-viral" style="background:#ff444420;color:#ff4444;">품절대란</span>
+  </div>
+</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">저소음 버티컬 마우스</span>
+    <span class="disc-price">5,000원</span>
+  </div>
+  <div class="disc-why">3월 신상. 손목 건강. 한달 6천명 구매</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#2196f320;color:#2196f3;">IT</span>
+    <span class="disc-viral" style="background:#ff6b0020;color:#ff6b00;">SNS화제</span>
+  </div>
+</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">스카이보틀 향수</span>
+    <span class="disc-price">3,000원</span>
+  </div>
+  <div class="disc-why">SNS 바이럴 향기템. Z세대 인기</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
+    <span class="disc-viral" style="background:#ff6b0020;color:#ff6b00;">SNS바이럴</span>
+  </div>
+</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">손앤박 컬러밤</span>
+    <span class="disc-price">3,000원</span>
+  </div>
+  <div class="disc-why">립앤치크 멀티밤. 발색 예쁨</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
+    <span class="disc-viral" style="background:#ff980020;color:#ff9800;">인기</span>
+  </div>
+</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">줌 바이 정샘물</span>
+    <span class="disc-price">3,000원</span>
+  </div>
+  <div class="disc-why">2026 다이소 뷰티 신상. 품절 대란</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
+    <span class="disc-viral" style="background:#ff444420;color:#ff4444;">품절대란</span>
+  </div>
+</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">곰팡이 제거 젤</span>
+    <span class="disc-price">1,000원</span>
+  </div>
+  <div class="disc-why">Before/After 임팩트 최고. 항상 재고 있음</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#4caf5020;color:#4caf50;">생활</span>
+    <span class="disc-viral" style="background:#607d8b20;color:#607d8b;">스테디</span>
+  </div>
+</div></div><div class="disc-group"><div class="disc-source">🟢 올리브영</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">퓌 푸딩팟 망그러진곰 한정판</span>
+    <span class="disc-price">12,000원대</span>
+  </div>
+  <div class="disc-why">올리브영 전용 파우치 포함. 가성비 좋음</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
+    <span class="disc-viral" style="background:#e91e9c20;color:#e91e9c;">한정판</span>
+  </div>
+</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">토리든 다이브인 세럼</span>
+    <span class="disc-price">18,000원대</span>
+  </div>
+  <div class="disc-why">2025 어워즈 1위. 올영 대표 세럼</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
+    <span class="disc-viral" style="background:#ffd43b20;color:#ffd43b;">어워즈1위</span>
+  </div>
+</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">메디힐 마스크팩</span>
+    <span class="disc-price">10,000원대</span>
+  </div>
+  <div class="disc-why">15년 연속 1위. 마스크팩의 정석</div>
+  <div class="disc-tags">
+    <span class="type-feed">피드</span>
+    <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
+    <span class="disc-viral" style="background:#607d8b20;color:#607d8b;">스테디</span>
+  </div>
+</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">에뛰드 콜라겐 크림 세트</span>
+    <span class="disc-price">15,000원대</span>
+  </div>
+  <div class="disc-why">망그러진곰 기획 상품. 귀여운 패키지</div>
+  <div class="disc-tags">
+    <span class="type-feed">피드</span>
+    <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
+    <span class="disc-viral" style="background:#9c27b020;color:#9c27b0;">콜라보</span>
+  </div>
+</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">스킨푸드 당근 패드</span>
+    <span class="disc-price">12,000원대</span>
+  </div>
+  <div class="disc-why">망그러진곰 기획 상품. SNS 화제</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
+    <span class="disc-viral" style="background:#9c27b020;color:#9c27b0;">콜라보</span>
+  </div>
+</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">곤약 클렌징 퍼프</span>
+    <span class="disc-price">5,000원대</span>
+  </div>
+  <div class="disc-why">물 먹는 장면이 릴스에서 반응 좋음</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
+    <span class="disc-viral" style="background:#2196f320;color:#2196f3;">영상적합</span>
+  </div>
+</div></div><div class="disc-group"><div class="disc-source">🟠 쿠팡</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">의자 다리 캡 세트</span>
+    <span class="disc-price">8,000원대</span>
+  </div>
+  <div class="disc-why">소음 비교 Before/After. ASMR 요소</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#4caf5020;color:#4caf50;">생활</span>
+    <span class="disc-viral" style="background:#2196f320;color:#2196f3;">영상적합</span>
+  </div>
+</div><div class="disc-item">
+  <div class="disc-top">
+    <span class="disc-name">실리콘 배수구 거름망</span>
+    <span class="disc-price">3,000원대</span>
+  </div>
+  <div class="disc-why">주방/화장실 정리. Before/After 가능</div>
+  <div class="disc-tags">
+    <span class="type-reels">릴스</span>
+    <span class="disc-tag" style="background:#4caf5020;color:#4caf50;">생활</span>
+    <span class="disc-viral" style="background:#4caf5020;color:#4caf50;">가성비</span>
+  </div>
+</div></div>
+
+<div style="text-align:center;padding:20px;color:#5a6080;font-size:12px;">
+  제품을 선택하려면 텔레그램에서 제품명을 알려주세요!<br>
+  풀 패키지를 만들어드리겠습니다.
+</div>
+
 </div>
 
 </div>
 
 <div class="ft">템룸 대시보드</div>
+
+<script>
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  document.getElementById('content-' + tab).classList.add('active');
+}
+
+function filterDisc(type) {
+  document.querySelectorAll('.disc-filter').forEach(f => f.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.disc-item').forEach(item => {
+    if (type === 'all') {
+      item.style.display = 'block';
+    } else {
+      const tags = item.querySelector('.disc-tags').textContent;
+      item.style.display = tags.includes(type) ? 'block' : 'none';
+    }
+  });
+}
+</script>
 
 </body>
 </html>
