@@ -72,13 +72,6 @@ a{text-decoration:none;color:inherit}
 .type-reels{background:#2a1a3e;color:#b388ff;padding:2px 8px;border-radius:8px;font-size:10px;font-weight:700}
 .type-feed{background:#1a2e2a;color:#69f0ae;padding:2px 8px;border-radius:8px;font-size:10px;font-weight:700}
 
-/* 풀 패키지 만들기 버튼 */
-.pkg-btn{padding:4px 12px;border-radius:8px;font-size:11px;font-weight:700;border:none;cursor:pointer;background:#ffd43b;color:#1a1a2e;transition:all .15s}
-.pkg-btn:hover{background:#ffe066}
-.pkg-btn.requested{background:#1a2e1a;color:#68d391;cursor:default}
-.pkg-btn.requested:hover{background:#1a2e1a}
-.pkg-msg{font-size:11px;color:#68d391;margin-top:6px;padding:6px 12px;background:#1a2e1a;border-radius:8px;display:none}
-.pkg-msg.show{display:block}
 
 .ft{text-align:center;padding:20px;color:#2a2a4a;font-size:11px}
 </style>
@@ -87,7 +80,7 @@ a{text-decoration:none;color:inherit}
 
 <div class="hd">
   <h1>🏠 템룸</h1>
-  <p>@temroom_pick · 2026-03-30 18:32</p>
+  <p>@temroom_pick · 2026-03-30 18:42</p>
 </div>
 
 <div class="ct">
@@ -105,8 +98,8 @@ a{text-decoration:none;color:inherit}
   <div class="sb">
     <div class="st">📦 패키지</div>
     <div class="sn">
-      <div class="si"><div class="n">3</div><div class="l">완료</div></div>
-      <div class="si"><div class="n">1</div><div class="l">예정</div></div>
+      <div class="si"><div class="n">4</div><div class="l">완료</div></div>
+      <div class="si"><div class="n">0</div><div class="l">예정</div></div>
     </div>
   </div>
   <div class="sb">
@@ -120,12 +113,7 @@ a{text-decoration:none;color:inherit}
 
 <div class="sl">제품 목록</div>
 <div class="plist">
-<a href="speaker_fullpackage_260327.html" class="pr cl"><div class="pl"><span class="pe">🛒</span><span class="pn">다이소 블루투스 LED 스피커</span></div><div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-up">릴스 업로드</span><span class="ar">→</span></div></a><a href="hera_fullpackage_260329.html" class="pr cl"><div class="pl"><span class="pe">💄</span><span class="pn">헤라 립 글로스 세트</span></div><div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-sch">릴스 03/31</span><span class="ar">→</span></div></a><a href="vacuum_fullpackage_260330.html" class="pr cl"><div class="pl"><span class="pe">🛒</span><span class="pn">다이소 진공 저장 용기</span></div><div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-sch">릴스 04/02</span><span class="ar">→</span></div></a><div class="pr">
-  <div class="pl"><span class="pe">🍽️</span><span class="pn dm">춘식이 핸들플레이트</span></div>
-  <div class="prr"><span class="b b-plan">패키지 예정</span><span class="b b-sch">피드 04/04</span>
-    <button id="btn-춘식이_핸들플레이트" class="pkg-btn" onclick="requestPackage('춘식이_핸들플레이트','춘식이 핸들플레이트')">풀 패키지 만들기</button>
-  </div>
-</div>
+<a href="speaker_fullpackage_260327.html" class="pr cl"><div class="pl"><span class="pe">🛒</span><span class="pn">다이소 블루투스 LED 스피커</span></div><div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-up">릴스 업로드</span><span class="ar">→</span></div></a><a href="hera_fullpackage_260329.html" class="pr cl"><div class="pl"><span class="pe">💄</span><span class="pn">헤라 립 글로스 세트</span></div><div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-sch">릴스 03/31</span><span class="ar">→</span></div></a><a href="vacuum_fullpackage_260330.html" class="pr cl"><div class="pl"><span class="pe">🛒</span><span class="pn">다이소 진공 저장 용기</span></div><div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-sch">릴스 04/02</span><span class="ar">→</span></div></a><a href="chunsik_fullpackage_260330.html" class="pr cl"><div class="pl"><span class="pe">🍽️</span><span class="pn">춘식이 핸들플레이트</span></div><div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-sch">피드 04/04</span><span class="ar">→</span></div></a>
 </div>
 
 </div>
@@ -343,25 +331,6 @@ function filterDisc(type) {
   });
 }
 
-function requestPackage(id, name) {
-  var btn = document.getElementById('btn-' + id);
-  if (btn.classList.contains('requested')) return;
-  btn.textContent = '요청됨 ✓';
-  btn.classList.add('requested');
-  localStorage.setItem('pkg-req-' + id, 'true');
-  alert('풀 패키지 요청됨!\n\n텔레그램에서 아래 메시지를 보내주세요:\n\n"' + name + ' 풀 패키지 만들어줘"');
-}
-
-// 페이지 로드 시 이전 요청 상태 복원
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.pkg-btn').forEach(function(btn) {
-    var id = btn.id.replace('btn-', '');
-    if (localStorage.getItem('pkg-req-' + id) === 'true') {
-      btn.textContent = '요청됨 ✓';
-      btn.classList.add('requested');
-    }
-  });
-});
 </script>
 
 </body>

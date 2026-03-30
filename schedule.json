@@ -1,0 +1,50 @@
+{
+  "packages": [
+    {
+      "name": "다이소 블루투스 LED 스피커",
+      "status": "완료",
+      "report": "speaker_fullpackage_260327.html"
+    },
+    {
+      "name": "헤라 립 글로스 세트",
+      "status": "완료",
+      "report": "hera_fullpackage_260329.html"
+    },
+    {
+      "name": "다이소 진공 저장 용기",
+      "status": "완료",
+      "report": "vacuum_fullpackage_260330.html"
+    },
+    {
+      "name": "춘식이 핸들플레이트",
+      "status": "완료",
+      "report": "chunsik_fullpackage_260330.html"
+    }
+  ],
+  "uploads": [
+    {
+      "name": "다이소 블루투스 LED 스피커",
+      "type": "릴스",
+      "status": "업로드",
+      "date": "2026-03-27"
+    },
+    {
+      "name": "헤라 립 글로스 세트",
+      "type": "릴스",
+      "status": "예정",
+      "date": "2026-03-31"
+    },
+    {
+      "name": "다이소 진공 저장 용기",
+      "type": "릴스",
+      "status": "예정",
+      "date": "2026-04-02"
+    },
+    {
+      "name": "춘식이 핸들플레이트",
+      "type": "피드",
+      "status": "예정",
+      "date": "2026-04-04"
+    }
+  ]
+}
