@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>템룸 대시보드</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',sans-serif;background:#0f0f1a;color:#e0e0e0}
+a{text-decoration:none;color:inherit}
+
+.hd{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);padding:36px 20px 28px;text-align:center;border-bottom:3px solid #ffd43b}
+.hd h1{font-size:28px;font-weight:900;color:#ffd43b}
+.hd p{font-size:13px;color:#6a7090;margin-top:4px}
+
+.ct{max-width:640px;margin:0 auto;padding:20px 16px}
+
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.sb{background:#1a1a2e;border-radius:14px;padding:18px;border:1px solid #2a2a4a}
+.sb .st{font-size:12px;color:#6a7090;font-weight:700;margin-bottom:10px;letter-spacing:1px}
+.sn{display:flex;gap:20px}
+.si{text-align:center}
+.si .n{font-size:24px;font-weight:900;color:#ffd43b;line-height:1}
+.si .l{font-size:11px;color:#5a6080;margin-top:4px}
+
+.sl{font-size:14px;font-weight:900;color:#ffd43b;margin-bottom:10px;padding-left:4px}
+.plist{display:flex;flex-direction:column;gap:6px;margin-bottom:24px}
+.pr{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:#1a1a2e;border-radius:12px;border:1px solid #2a2a4a}
+.pr.cl{cursor:pointer;transition:all .15s}
+.pr.cl:hover{border-color:#ffd43b;background:#1e1e35}
+.pl{display:flex;align-items:center;gap:10px}
+.pe{font-size:18px}
+.pn{font-size:14px;font-weight:700}
+.pn.dm{color:#5a6080}
+.prr{display:flex;align-items:center;gap:6px;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
+.ar{color:#ffd43b;font-weight:700;font-size:14px}
+
+.b{padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700;white-space:nowrap}
+.b-done{background:#1a2e1a;color:#68d391}
+.b-plan{background:#2e2a1a;color:#ffd43b}
+.b-up{background:#1a1a2e;color:#63b3ed;border:1px solid #2a4a6a}
+.b-sch{background:#1a1a2e;color:#a0a0b0;border:1px solid #2a2a4a}
+
+.ft{text-align:center;padding:24px 20px;color:#2a2a4a;font-size:11px}
+</style>
+</head>
+<body>
+
+<div class="hd">
+  <h1>🏠 템룸</h1>
+  <p>@temroom_pick · 2026-03-30 17:08</p>
+</div>
+
+<div class="ct">
+
+<div class="stats">
+  <div class="sb">
+    <div class="st">📦 패키지</div>
+    <div class="sn">
+      <div class="si"><div class="n">3</div><div class="l">완료</div></div>
+      <div class="si"><div class="n">1</div><div class="l">예정</div></div>
+    </div>
+  </div>
+  <div class="sb">
+    <div class="st">📸 인스타</div>
+    <div class="sn">
+      <div class="si"><div class="n">1</div><div class="l">업로드</div></div>
+      <div class="si"><div class="n">3</div><div class="l">예정</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sl">제품 목록</div>
+<div class="plist">
+<a href="speaker_fullpackage_260327.html" class="pr cl">
+  <div class="pl"><span class="pe">🛒</span><span class="pn">다이소 블루투스 LED 스피커</span></div>
+  <div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-up">릴스 업로드</span><span class="ar">→</span></div>
+</a><a href="hera_fullpackage_260329.html" class="pr cl">
+  <div class="pl"><span class="pe">💄</span><span class="pn">헤라 립 글로스 세트</span></div>
+  <div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-sch">릴스 03/31</span><span class="ar">→</span></div>
+</a><a href="vacuum_fullpackage_260330.html" class="pr cl">
+  <div class="pl"><span class="pe">🛒</span><span class="pn">다이소 진공 저장 용기</span></div>
+  <div class="prr"><span class="b b-done">패키지 완료</span><span class="b b-sch">릴스 04/02</span><span class="ar">→</span></div>
+</a><div class="pr">
+  <div class="pl"><span class="pe">🍽️</span><span class="pn dm">춘식이 핸들플레이트</span></div>
+  <div class="prr"><span class="b b-plan">패키지 예정</span><span class="b b-sch">피드 04/04</span></div>
+</div>
+</div>
+
+</div>
+
+<div class="ft">템룸 대시보드</div>
+
+</body>
+</html>
