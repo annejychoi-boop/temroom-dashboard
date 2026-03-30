@@ -17,8 +17,20 @@ a{text-decoration:none;color:inherit}
 
 /* 탭 */
 .tabs{display:flex;gap:4px;margin-bottom:20px;background:#1a1a2e;border-radius:12px;padding:4px;border:1px solid #2a2a4a}
-.tab{flex:1;text-align:center;padding:10px;border-radius:10px;font-size:14px;font-weight:700;color:#5a6080;cursor:pointer}
+.tab{flex:1;text-align:center;padding:10px;border-radius:10px;font-size:13px;font-weight:700;color:#5a6080;cursor:pointer}
 .tab.active{background:#ffd43b;color:#1a1a2e}
+
+/* 저장 버튼 */
+.save-btn{background:none;border:1px solid #3a3a5a;border-radius:6px;font-size:16px;cursor:pointer;padding:2px 6px;color:#5a6080;transition:all .15s}
+.save-btn:hover{border-color:#ffd43b}
+.save-btn.saved{color:#ffd43b;border-color:#ffd43b}
+
+/* 저장된 제품 목록 */
+.saved-list{display:flex;flex-direction:column;gap:6px}
+.saved-item{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:#1a1a2e;border-radius:10px;border:1px solid #2a2a4a}
+.saved-item .si-name{font-size:14px;font-weight:700}
+.saved-item .si-remove{background:none;border:1px solid #3a3a5a;border-radius:6px;font-size:12px;cursor:pointer;padding:3px 8px;color:#ff6b6b}
+.saved-empty{text-align:center;padding:30px;color:#5a6080;font-size:13px}
 .tab-content{display:none}
 .tab-content.active{display:block}
 
@@ -80,7 +92,7 @@ a{text-decoration:none;color:inherit}
 
 <div class="hd">
   <h1>🏠 템룸</h1>
-  <p>@temroom_pick · 2026-03-30 19:12</p>
+  <p>@temroom_pick · 2026-03-30 19:17</p>
 </div>
 
 <div class="ct">
@@ -89,6 +101,7 @@ a{text-decoration:none;color:inherit}
 <div class="tabs">
   <div class="tab active" id="tab-pkg" onclick="switchTab('pkg')">📦 패키지</div>
   <div class="tab" id="tab-disc" onclick="switchTab('disc')">🔍 제품발굴</div>
+  <div class="tab" id="tab-saved" onclick="switchTab('saved')">⭐ 저장됨</div>
 </div>
 
 <!-- 패키지 탭 -->
@@ -132,10 +145,13 @@ a{text-decoration:none;color:inherit}
   <div class="disc-filter" onclick="filterDisc('피드')">피드용</div>
 </div>
 
-<div class="disc-group"><div class="disc-source">🛒 다이소</div><div class="disc-item">
+<div class="disc-group"><div class="disc-source">🛒 다이소</div><div class="disc-item" id="disc-무선_이어폰_다이팟" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">무선 이어폰 (다이팟)</span>
-    <span class="disc-price">5,000원</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">5,000원</span>
+      <button class="save-btn" id="save-무선_이어폰_다이팟" onclick="toggleSave('무선_이어폰_다이팟','무선 이어폰 (다이팟)')">☆</button>
+    </div>
   </div>
   <div class="disc-why">100만명 몰린 품절대란. 에어팟 대체용으로 화제</div>
   <div class="disc-tags">
@@ -143,10 +159,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#2196f320;color:#2196f3;">IT</span>
     <span class="disc-viral" style="background:#ff444420;color:#ff4444;">품절대란</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-저소음_블루투스_키보드" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">저소음 블루투스 키보드</span>
-    <span class="disc-price">5,000원</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">5,000원</span>
+      <button class="save-btn" id="save-저소음_블루투스_키보드" onclick="toggleSave('저소음_블루투스_키보드','저소음 블루투스 키보드')">☆</button>
+    </div>
   </div>
   <div class="disc-why">3월 신상. 아이패드 연결 가능. 품절 중</div>
   <div class="disc-tags">
@@ -154,10 +173,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#2196f320;color:#2196f3;">IT</span>
     <span class="disc-viral" style="background:#ff444420;color:#ff4444;">품절대란</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-저소음_버티컬_마우스" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">저소음 버티컬 마우스</span>
-    <span class="disc-price">5,000원</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">5,000원</span>
+      <button class="save-btn" id="save-저소음_버티컬_마우스" onclick="toggleSave('저소음_버티컬_마우스','저소음 버티컬 마우스')">☆</button>
+    </div>
   </div>
   <div class="disc-why">손목 건강. 한달 6천명 구매</div>
   <div class="disc-tags">
@@ -165,10 +187,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#2196f320;color:#2196f3;">IT</span>
     <span class="disc-viral" style="background:#ff6b0020;color:#ff6b00;">SNS화제</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-솔루엠_25W_충전기" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">솔루엠 25W 충전기</span>
-    <span class="disc-price">5,000원</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">5,000원</span>
+      <button class="save-btn" id="save-솔루엠_25W_충전기" onclick="toggleSave('솔루엠_25W_충전기','솔루엠 25W 충전기')">☆</button>
+    </div>
   </div>
   <div class="disc-why">삼성 협력사 제조. 정품급 성능. 항상 재고 있음</div>
   <div class="disc-tags">
@@ -176,10 +201,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#2196f320;color:#2196f3;">IT</span>
     <span class="disc-viral" style="background:#607d8b20;color:#607d8b;">스테디</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-스테인리스_도마_정리대" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">스테인리스 도마 정리대</span>
-    <span class="disc-price">3,000원</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">3,000원</span>
+      <button class="save-btn" id="save-스테인리스_도마_정리대" onclick="toggleSave('스테인리스_도마_정리대','스테인리스 도마 정리대')">☆</button>
+    </div>
   </div>
   <div class="disc-why">주방 정리 필수템. 도마+쟁반 수납</div>
   <div class="disc-tags">
@@ -187,10 +215,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#88820;color:#888;">주방</span>
     <span class="disc-viral" style="background:#ff980020;color:#ff9800;">인기</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-원목_접시_정리대" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">원목 접시 정리대</span>
-    <span class="disc-price">2,000원</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">2,000원</span>
+      <button class="save-btn" id="save-원목_접시_정리대" onclick="toggleSave('원목_접시_정리대','원목 접시 정리대')">☆</button>
+    </div>
   </div>
   <div class="disc-why">접시 6개 수납. 가성비 끝판왕</div>
   <div class="disc-tags">
@@ -198,10 +229,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#88820;color:#888;">주방</span>
     <span class="disc-viral" style="background:#4caf5020;color:#4caf50;">가성비</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-실리콘_조리도구_세트" data-type="피드">
   <div class="disc-top">
     <span class="disc-name">실리콘 조리도구 세트</span>
-    <span class="disc-price">2,000원</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">2,000원</span>
+      <button class="save-btn" id="save-실리콘_조리도구_세트" onclick="toggleSave('실리콘_조리도구_세트','실리콘 조리도구 세트')">☆</button>
+    </div>
   </div>
   <div class="disc-why">냄비 긁힘 방지. 국자/뒤집개/스푼</div>
   <div class="disc-tags">
@@ -209,10 +243,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#88820;color:#888;">주방</span>
     <span class="disc-viral" style="background:#607d8b20;color:#607d8b;">스테디</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-냉장고_수납_바구니" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">냉장고 수납 바구니</span>
-    <span class="disc-price">2,000원</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">2,000원</span>
+      <button class="save-btn" id="save-냉장고_수납_바구니" onclick="toggleSave('냉장고_수납_바구니','냉장고 수납 바구니')">☆</button>
+    </div>
   </div>
   <div class="disc-why">냉장고 정리 Before/After 가능</div>
   <div class="disc-tags">
@@ -220,10 +257,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#88820;color:#888;">정리</span>
     <span class="disc-viral" style="background:#2196f320;color:#2196f3;">영상적합</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-곰팡이_제거_젤" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">곰팡이 제거 젤</span>
-    <span class="disc-price">1,000원</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">1,000원</span>
+      <button class="save-btn" id="save-곰팡이_제거_젤" onclick="toggleSave('곰팡이_제거_젤','곰팡이 제거 젤')">☆</button>
+    </div>
   </div>
   <div class="disc-why">Before/After 임팩트 최고. 항상 재고</div>
   <div class="disc-tags">
@@ -231,10 +271,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#4caf5020;color:#4caf50;">생활</span>
     <span class="disc-viral" style="background:#2196f320;color:#2196f3;">영상적합</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-스카이보틀_향수" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">스카이보틀 향수</span>
-    <span class="disc-price">3,000원</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">3,000원</span>
+      <button class="save-btn" id="save-스카이보틀_향수" onclick="toggleSave('스카이보틀_향수','스카이보틀 향수')">☆</button>
+    </div>
   </div>
   <div class="disc-why">SNS 바이럴 향기템. Z세대 인기</div>
   <div class="disc-tags">
@@ -242,10 +285,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
     <span class="disc-viral" style="background:#ff6b0020;color:#ff6b00;">SNS바이럴</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-VT_리들샷_100_앰플" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">VT 리들샷 100 앰플</span>
-    <span class="disc-price">3,000원</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">3,000원</span>
+      <button class="save-btn" id="save-VT_리들샷_100_앰플" onclick="toggleSave('VT_리들샷_100_앰플','VT 리들샷 100 앰플')">☆</button>
+    </div>
   </div>
   <div class="disc-why">3만원짜리가 3천원. 아직도 품절 대란</div>
   <div class="disc-tags">
@@ -253,10 +299,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
     <span class="disc-viral" style="background:#ff444420;color:#ff4444;">품절대란</span>
   </div>
-</div></div><div class="disc-group"><div class="disc-source">🟢 올리브영</div><div class="disc-item">
+</div></div><div class="disc-group"><div class="disc-source">🟢 올리브영</div><div class="disc-item" id="disc-수면_건강식품_멜라토닌" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">수면 건강식품 (멜라토닌)</span>
-    <span class="disc-price">15,000원대</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">15,000원대</span>
+      <button class="save-btn" id="save-수면_건강식품_멜라토닌" onclick="toggleSave('수면_건강식품_멜라토닌','수면 건강식품 (멜라토닌)')">☆</button>
+    </div>
   </div>
   <div class="disc-why">매출 300% 급증. 수면템 트렌드</div>
   <div class="disc-tags">
@@ -264,10 +313,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#88820;color:#888;">웰니스</span>
     <span class="disc-viral" style="background:#88820;color:#888;">트렌드</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-웰니스_젤리/스낵" data-type="피드">
   <div class="disc-top">
     <span class="disc-name">웰니스 젤리/스낵</span>
-    <span class="disc-price">5,000원대</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">5,000원대</span>
+      <button class="save-btn" id="save-웰니스_젤리/스낵" onclick="toggleSave('웰니스_젤리/스낵','웰니스 젤리/스낵')">☆</button>
+    </div>
   </div>
   <div class="disc-why">건강 간식 트렌드. MZ세대 얼리 웰니스</div>
   <div class="disc-tags">
@@ -275,10 +327,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#88820;color:#888;">웰니스</span>
     <span class="disc-viral" style="background:#88820;color:#888;">트렌드</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-곤약_클렌징_퍼프" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">곤약 클렌징 퍼프</span>
-    <span class="disc-price">5,000원대</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">5,000원대</span>
+      <button class="save-btn" id="save-곤약_클렌징_퍼프" onclick="toggleSave('곤약_클렌징_퍼프','곤약 클렌징 퍼프')">☆</button>
+    </div>
   </div>
   <div class="disc-why">물 먹는 장면이 릴스에서 반응 좋음</div>
   <div class="disc-tags">
@@ -286,10 +341,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
     <span class="disc-viral" style="background:#2196f320;color:#2196f3;">영상적합</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-토리든_다이브인_세럼" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">토리든 다이브인 세럼</span>
-    <span class="disc-price">18,000원대</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">18,000원대</span>
+      <button class="save-btn" id="save-토리든_다이브인_세럼" onclick="toggleSave('토리든_다이브인_세럼','토리든 다이브인 세럼')">☆</button>
+    </div>
   </div>
   <div class="disc-why">2025 어워즈 세럼 1위</div>
   <div class="disc-tags">
@@ -297,10 +355,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#e91e9c20;color:#e91e9c;">뷰티</span>
     <span class="disc-viral" style="background:#ffd43b20;color:#ffd43b;">어워즈1위</span>
   </div>
-</div></div><div class="disc-group"><div class="disc-source">🟠 쿠팡</div><div class="disc-item">
+</div></div><div class="disc-group"><div class="disc-source">🟠 쿠팡</div><div class="disc-item" id="disc-3단_수류_조절_샤워기헤드" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">3단 수류 조절 샤워기헤드</span>
-    <span class="disc-price">10,000원대</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">10,000원대</span>
+      <button class="save-btn" id="save-3단_수류_조절_샤워기헤드" onclick="toggleSave('3단_수류_조절_샤워기헤드','3단 수류 조절 샤워기헤드')">☆</button>
+    </div>
   </div>
   <div class="disc-why">수압 상승+필터 기능. Before/After 가능</div>
   <div class="disc-tags">
@@ -308,10 +369,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#4caf5020;color:#4caf50;">생활</span>
     <span class="disc-viral" style="background:#4caf5020;color:#4caf50;">가성비</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-의자_다리_캡_세트" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">의자 다리 캡 세트</span>
-    <span class="disc-price">8,000원대</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">8,000원대</span>
+      <button class="save-btn" id="save-의자_다리_캡_세트" onclick="toggleSave('의자_다리_캡_세트','의자 다리 캡 세트')">☆</button>
+    </div>
   </div>
   <div class="disc-why">소음 비교 Before/After. ASMR 요소</div>
   <div class="disc-tags">
@@ -319,10 +383,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#4caf5020;color:#4caf50;">생활</span>
     <span class="disc-viral" style="background:#2196f320;color:#2196f3;">영상적합</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-미니_가습기_USB" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">미니 가습기 (USB)</span>
-    <span class="disc-price">10,000원대</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">10,000원대</span>
+      <button class="save-btn" id="save-미니_가습기_USB" onclick="toggleSave('미니_가습기_USB','미니 가습기 (USB)')">☆</button>
+    </div>
   </div>
   <div class="disc-why">책상 위 가성비 가습기. 비주얼 좋음</div>
   <div class="disc-tags">
@@ -330,10 +397,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#4caf5020;color:#4caf50;">생활</span>
     <span class="disc-viral" style="background:#4caf5020;color:#4caf50;">가성비</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-실리콘_배수구_거름망" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">실리콘 배수구 거름망</span>
-    <span class="disc-price">3,000원대</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">3,000원대</span>
+      <button class="save-btn" id="save-실리콘_배수구_거름망" onclick="toggleSave('실리콘_배수구_거름망','실리콘 배수구 거름망')">☆</button>
+    </div>
   </div>
   <div class="disc-why">주방/화장실 정리. Before/After 가능</div>
   <div class="disc-tags">
@@ -341,10 +411,13 @@ a{text-decoration:none;color:inherit}
     <span class="disc-tag" style="background:#4caf5020;color:#4caf50;">생활</span>
     <span class="disc-viral" style="background:#4caf5020;color:#4caf50;">가성비</span>
   </div>
-</div><div class="disc-item">
+</div><div class="disc-item" id="disc-발_지압_매트_아큐스터" data-type="릴스">
   <div class="disc-top">
     <span class="disc-name">발 지압 매트 (아큐스터)</span>
-    <span class="disc-price">15,000원대</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span class="disc-price">15,000원대</span>
+      <button class="save-btn" id="save-발_지압_매트_아큐스터" onclick="toggleSave('발_지압_매트_아큐스터','발 지압 매트 (아큐스터)')">☆</button>
+    </div>
   </div>
   <div class="disc-why">운동+마사지 동시. 리액션 영상 가능</div>
   <div class="disc-tags">
@@ -355,10 +428,19 @@ a{text-decoration:none;color:inherit}
 </div></div>
 
 <div style="text-align:center;padding:20px;color:#5a6080;font-size:12px;">
-  제품을 선택하려면 텔레그램에서 제품명을 알려주세요!<br>
-  풀 패키지를 만들어드리겠습니다.
+  ☆ 버튼을 눌러 관심 제품을 저장하세요
 </div>
 
+</div>
+
+<!-- 저장됨 탭 -->
+<div class="tab-content" id="content-saved">
+<div class="disc-header">
+  <div class="title">⭐ 저장된 제품</div>
+</div>
+<div id="saved-list" class="saved-list">
+  <div class="saved-empty" id="saved-empty">아직 저장된 제품이 없어요<br>제품발굴 탭에서 ☆ 버튼을 눌러보세요</div>
+</div>
 </div>
 
 </div>
@@ -380,11 +462,85 @@ function filterDisc(type) {
     if (type === 'all') {
       item.style.display = 'block';
     } else {
-      const tags = item.querySelector('.disc-tags').textContent;
-      item.style.display = tags.includes(type) ? 'block' : 'none';
+      var dt = item.getAttribute('data-type');
+      item.style.display = (dt === type) ? 'block' : 'none';
     }
   });
 }
+
+function getSaved() {
+  try { return JSON.parse(localStorage.getItem('temroom-saved') || '[]'); }
+  catch(e) { return []; }
+}
+
+function saveSaved(list) {
+  localStorage.setItem('temroom-saved', JSON.stringify(list));
+}
+
+function toggleSave(id, name) {
+  var saved = getSaved();
+  var btn = document.getElementById('save-' + id);
+  var idx = saved.findIndex(function(s) { return s.id === id; });
+  if (idx >= 0) {
+    saved.splice(idx, 1);
+    btn.textContent = '☆';
+    btn.classList.remove('saved');
+  } else {
+    saved.push({id: id, name: name});
+    btn.textContent = '★';
+    btn.classList.add('saved');
+  }
+  saveSaved(saved);
+  renderSaved();
+}
+
+function removeSaved(id) {
+  var saved = getSaved();
+  saved = saved.filter(function(s) { return s.id !== id; });
+  saveSaved(saved);
+  var btn = document.getElementById('save-' + id);
+  if (btn) {
+    btn.textContent = '☆';
+    btn.classList.remove('saved');
+  }
+  renderSaved();
+}
+
+function renderSaved() {
+  var saved = getSaved();
+  var list = document.getElementById('saved-list');
+  var empty = document.getElementById('saved-empty');
+
+  // 기존 아이템 제거 (empty 제외)
+  var items = list.querySelectorAll('.saved-item');
+  items.forEach(function(item) { item.remove(); });
+
+  if (saved.length === 0) {
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+
+  saved.forEach(function(s) {
+    var div = document.createElement('div');
+    div.className = 'saved-item';
+    div.innerHTML = '<span class="si-name">⭐ ' + s.name + '</span><button class="si-remove" onclick="removeSaved(\'' + s.id + '\')">삭제</button>';
+    list.appendChild(div);
+  });
+}
+
+// 페이지 로드 시 저장 상태 복원
+document.addEventListener('DOMContentLoaded', function() {
+  var saved = getSaved();
+  saved.forEach(function(s) {
+    var btn = document.getElementById('save-' + s.id);
+    if (btn) {
+      btn.textContent = '★';
+      btn.classList.add('saved');
+    }
+  });
+  renderSaved();
+});
 
 </script>
 
