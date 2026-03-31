@@ -24,6 +24,11 @@
       "name": "정샘물 에센셜 스킨 누더 쿠션",
       "status": "완료",
       "report": "jungsaemmool_fullpackage_260331.html"
+    },
+    {
+      "name": "스타벅스 사은품 모음",
+      "status": "예정",
+      "report": ""
     }
   ],
   "uploads": [
@@ -54,6 +59,12 @@
     {
       "name": "정샘물 에센셜 스킨 누더 쿠션",
       "type": "릴스",
+      "status": "예정",
+      "date": ""
+    },
+    {
+      "name": "스타벅스 사은품 모음",
+      "type": "피드",
       "status": "예정",
       "date": ""
     }
