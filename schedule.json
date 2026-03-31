@@ -34,6 +34,31 @@
       "name": "올리브영 웰니스 젤리 3종",
       "status": "완료",
       "report": "wellness_fullpackage_260331.html"
+    },
+    {
+      "name": "다이소 개인정보 지우개",
+      "status": "예정",
+      "report": ""
+    },
+    {
+      "name": "다이소 핸들 채소다지기",
+      "status": "예정",
+      "report": ""
+    },
+    {
+      "name": "다이소 여행용 실리콘 용기세트",
+      "status": "예정",
+      "report": ""
+    },
+    {
+      "name": "쿤달 솔리드 퍼퓸 밤 핑크 에디션",
+      "status": "예정",
+      "report": ""
+    },
+    {
+      "name": "다이소 그릇커버",
+      "status": "예정",
+      "report": ""
     }
   ],
   "uploads": [
@@ -76,6 +101,36 @@
     {
       "name": "올리브영 웰니스 젤리 3종",
       "type": "피드",
+      "status": "예정",
+      "date": ""
+    },
+    {
+      "name": "다이소 개인정보 지우개",
+      "type": "릴스",
+      "status": "예정",
+      "date": ""
+    },
+    {
+      "name": "다이소 핸들 채소다지기",
+      "type": "릴스",
+      "status": "예정",
+      "date": ""
+    },
+    {
+      "name": "다이소 여행용 실리콘 용기세트",
+      "type": "릴스",
+      "status": "예정",
+      "date": ""
+    },
+    {
+      "name": "쿤달 솔리드 퍼퓸 밤 핑크 에디션",
+      "type": "릴스",
+      "status": "예정",
+      "date": ""
+    },
+    {
+      "name": "다이소 그릇커버",
+      "type": "릴스",
       "status": "예정",
       "date": ""
     }
