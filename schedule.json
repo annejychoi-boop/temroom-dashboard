@@ -19,6 +19,11 @@
       "name": "춘식이 핸들플레이트",
       "status": "완료",
       "report": "chunsik_fullpackage_260330.html"
+    },
+    {
+      "name": "정샘물 에센셜 스킨 누더 쿠션",
+      "status": "완료",
+      "report": "jungsaemmool_fullpackage_260331.html"
     }
   ],
   "uploads": [
@@ -45,6 +50,12 @@
       "type": "피드",
       "status": "예정",
       "date": "2026-04-04"
+    },
+    {
+      "name": "정샘물 에센셜 스킨 누더 쿠션",
+      "type": "릴스",
+      "status": "예정",
+      "date": ""
     }
   ]
 }
