@@ -1,226 +1,51 @@
 {
   "packages": [
-    {
-      "name": "다이소 블루투스 LED 스피커",
-      "status": "완료",
-      "report": "speaker_fullpackage_260327.html"
-    },
-    {
-      "name": "헤라 립 글로스 세트",
-      "status": "완료",
-      "report": "hera_fullpackage_260329.html"
-    },
-    {
-      "name": "다이소 진공 저장 용기",
-      "status": "완료",
-      "report": "vacuum_fullpackage_260401.html"
-    },
-    {
-      "name": "춘식이 핸들플레이트",
-      "status": "완료",
-      "report": "chunsik_fullpackage_260330.html"
-    },
-    {
-      "name": "정샘물 에센셜 스킨 누더 쿠션",
-      "status": "완료",
-      "report": "jungsaemmool_fullpackage_260331.html"
-    },
-    {
-      "name": "스타벅스 사은품 모음",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "올리브영 웰니스 젤리 3종",
-      "status": "완료",
-      "report": "wellness_fullpackage_260331.html"
-    },
-    {
-      "name": "다이소 개인정보 지우개",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "다이소 핸들 채소다지기",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "다이소 여행용 실리콘 용기세트",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "쿤달 솔리드 퍼퓸 밤 핑크 에디션",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "다이소 그릇커버",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "다이소 꿀템 모음",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "비코드 데일리 액상 면봉",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "스펀지팝 하이드로 스펀지",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "크리스탈 쥬얼리 보관함",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "아라리 맥세이프 셀카봉",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "신지모루 3in1 거치대",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "쥬롬 실리콘 케이블 타이",
-      "status": "예정",
-      "report": ""
-    },
-    {
-      "name": "오지렌 여행용 멀티어댑터",
-      "status": "예정",
-      "report": ""
-    }
+    {"name": "다이소 블루투스 LED 스피커", "status": "완료", "report": "speaker_fullpackage_260327.html"},
+    {"name": "헤라 립 글로스 세트", "status": "완료", "report": "hera_fullpackage_260329.html"},
+    {"name": "다이소 진공 저장 용기", "status": "완료", "report": "vacuum_fullpackage_260401.html"},
+    {"name": "춘식이 핸들플레이트", "status": "완료", "report": "chunsik_fullpackage_260330.html"},
+    {"name": "정샘물 에센셜 스킨 누더 쿠션", "status": "완료", "report": "jungsaemmool_fullpackage_260331.html"},
+    {"name": "올리브영 웰니스 젤리 3종", "status": "완료", "report": "wellness_fullpackage_260331.html"},
+    {"name": "스타벅스 사은품 모음", "status": "예정", "report": ""},
+    {"name": "다이소 개인정보 지우개", "status": "예정", "report": ""},
+    {"name": "다이소 핸들 채소다지기", "status": "예정", "report": ""},
+    {"name": "다이소 여행용 실리콘 용기세트", "status": "예정", "report": ""},
+    {"name": "쿤달 솔리드 퍼퓸 밤 핑크 에디션", "status": "예정", "report": ""},
+    {"name": "다이소 그릇커버", "status": "예정", "report": ""},
+    {"name": "다이소 꿀템 모음", "status": "예정", "report": ""},
+    {"name": "비코드 데일리 액상 면봉", "status": "예정", "report": ""},
+    {"name": "스펀지팝 하이드로 스펀지", "status": "예정", "report": ""},
+    {"name": "크리스탈 쥬얼리 보관함", "status": "예정", "report": ""},
+    {"name": "아라리 맥세이프 셀카봉", "status": "예정", "report": ""},
+    {"name": "신지모루 3in1 거치대", "status": "예정", "report": ""},
+    {"name": "쥬롬 실리콘 케이블 타이", "status": "예정", "report": ""},
+    {"name": "오지렌 여행용 멀티어댑터", "status": "예정", "report": ""}
   ],
   "uploads": [
-    {
-      "name": "다이소 블루투스 LED 스피커",
-      "type": "릴스",
-      "status": "업로드",
-      "date": "2026-03-27"
-    },
-    {
-      "name": "헤라 립 글로스 세트",
-      "type": "릴스",
-      "status": "업로드",
-      "date": "2026-03-31"
-    },
-    {
-      "name": "다이소 진공 저장 용기",
-      "type": "릴스",
-      "status": "예정",
-      "date": "2026-04-02"
-    },
-    {
-      "name": "춘식이 핸들플레이트",
-      "type": "피드",
-      "status": "예정",
-      "date": "2026-04-04"
-    },
-    {
-      "name": "정샘물 에센셜 스킨 누더 쿠션",
-      "type": "릴스",
-      "status": "예정",
-      "date": "2026-04-07"
-    },
-    {
-      "name": "스타벅스 사은품 모음",
-      "type": "피드",
-      "status": "예정",
-      "date": "2026-04-18"
-    },
-    {
-      "name": "올리브영 웰니스 젤리 3종",
-      "type": "피드",
-      "status": "예정",
-      "date": "2026-04-11"
-    },
-    {
-      "name": "다이소 개인정보 지우개",
-      "type": "릴스",
-      "status": "예정",
-      "date": "2026-04-22"
-    },
-    {
-      "name": "다이소 핸들 채소다지기",
-      "type": "릴스",
-      "status": "예정",
-      "date": "2026-04-09"
-    },
-    {
-      "name": "다이소 여행용 실리콘 용기세트",
-      "type": "릴스",
-      "status": "예정",
-      "date": "2026-04-21"
-    },
-    {
-      "name": "쿤달 솔리드 퍼퓸 밤 핑크 에디션",
-      "type": "릴스",
-      "status": "예정",
-      "date": "2026-04-14"
-    },
-    {
-      "name": "다이소 그릇커버",
-      "type": "릴스",
-      "status": "예정",
-      "date": "2026-04-16"
-    },
-    {
-      "name": "다이소 꿀템 모음",
-      "type": "피드",
-      "status": "예정",
-      "date": "2026-04-25"
-    },
-    {
-      "name": "비코드 데일리 액상 면봉",
-      "type": "릴스",
-      "status": "예정",
-      "date": ""
-    },
-    {
-      "name": "스펀지팝 하이드로 스펀지",
-      "type": "릴스",
-      "status": "예정",
-      "date": ""
-    },
-    {
-      "name": "크리스탈 쥬얼리 보관함",
-      "type": "피드",
-      "status": "예정",
-      "date": ""
-    },
-    {
-      "name": "아라리 맥세이프 셀카봉",
-      "type": "릴스",
-      "status": "예정",
-      "date": ""
-    },
-    {
-      "name": "신지모루 3in1 거치대",
-      "type": "릴스",
-      "status": "예정",
-      "date": ""
-    },
-    {
-      "name": "쥬롬 실리콘 케이블 타이",
-      "type": "릴스",
-      "status": "예정",
-      "date": ""
-    },
-    {
-      "name": "오지렌 여행용 멀티어댑터",
-      "type": "릴스",
-      "status": "예정",
-      "date": ""
-    }
+    {"name": "다이소 블루투스 LED 스피커", "type": "릴스", "status": "업로드", "date": "2026-03-27"},
+    {"name": "헤라 립 글로스 세트", "type": "릴스", "status": "업로드", "date": "2026-03-31"},
+
+    {"name": "다이소 진공 저장 용기", "type": "릴스", "status": "예정", "date": "2026-04-02"},
+    {"name": "춘식이 핸들플레이트", "type": "피드", "status": "예정", "date": "2026-04-04"},
+
+    {"name": "정샘물 에센셜 스킨 누더 쿠션", "type": "릴스", "status": "예정", "date": "2026-04-07"},
+    {"name": "비코드 데일리 액상 면봉", "type": "릴스", "status": "예정", "date": "2026-04-09"},
+    {"name": "올리브영 웰니스 젤리 3종", "type": "피드", "status": "예정", "date": "2026-04-11"},
+
+    {"name": "쿤달 솔리드 퍼퓸 밤 핑크 에디션", "type": "릴스", "status": "예정", "date": "2026-04-14"},
+    {"name": "다이소 그릇커버", "type": "릴스", "status": "예정", "date": "2026-04-16"},
+    {"name": "크리스탈 쥬얼리 보관함", "type": "피드", "status": "예정", "date": "2026-04-18"},
+
+    {"name": "신지모루 3in1 거치대", "type": "릴스", "status": "예정", "date": "2026-04-21"},
+    {"name": "다이소 개인정보 지우개", "type": "릴스", "status": "예정", "date": "2026-04-23"},
+    {"name": "다이소 꿀템 모음", "type": "피드", "status": "예정", "date": "2026-04-25"},
+
+    {"name": "다이소 핸들 채소다지기", "type": "릴스", "status": "예정", "date": ""},
+    {"name": "다이소 여행용 실리콘 용기세트", "type": "릴스", "status": "예정", "date": ""},
+    {"name": "스타벅스 사은품 모음", "type": "피드", "status": "예정", "date": ""},
+    {"name": "스펀지팝 하이드로 스펀지", "type": "릴스", "status": "예정", "date": ""},
+    {"name": "아라리 맥세이프 셀카봉", "type": "릴스", "status": "예정", "date": ""},
+    {"name": "쥬롬 실리콘 케이블 타이", "type": "릴스", "status": "예정", "date": ""},
+    {"name": "오지렌 여행용 멀티어댑터", "type": "릴스", "status": "예정", "date": ""}
   ]
 }
