@@ -1,0 +1,44 @@
+{
+  "name": "비코드 데일리 액상면봉",
+  "date": "2026-04-06",
+  "duration": "7초",
+  "product_info": {
+    "price": "12,160원 (100개입)",
+    "rating": "4.5 (리뷰 2,135개)",
+    "monthly": "한달 2,000명+ 구매",
+    "features": "원터치 시스템 · 개별포장 · 귓속 세균 99.9% 살균"
+  },
+  "scenes": [
+    {
+      "time": "0~1초",
+      "subtitle": "(자막 없음 — 꺾는 동작이 훅)",
+      "shoot": "면봉 끝을 똑! 꺾는 클로즈업. 이 동작이 시선을 잡아요.",
+      "edit": "원속. 꺾는 소리 살리기.",
+      "highlight": false
+    },
+    {
+      "time": "1~5초",
+      "subtitle": "꺾으면 세정액이 나와요",
+      "shoot": "꺾은 면봉에서 액상이 스며나오는 클로즈업. 손가락에 대서 촉촉한 걸 보여줘도 좋아요.",
+      "edit": "원속. 핵심 장면!",
+      "highlight": true
+    },
+    {
+      "time": "5~7초",
+      "subtitle": "개별포장 100개 저장🔖",
+      "shoot": "제품 박스 + 개별 포장 면봉 여러 개 나란히 정지 컷",
+      "edit": "페이드 아웃",
+      "highlight": false
+    }
+  ],
+  "cover_text": "꺾으면 세정액이 나오는 면봉",
+  "caption": "면봉 끝을 꺾으면 세정액이 나와요\n\n비코드 데일리 액상면봉이에요\n\n✔️ 원터치로 똑 꺾으면 끝!\n✔️ 귓속 세균 99.9% 살균\n✔️ 개별 포장이라 휴대 편해요\n✔️ 한달에 2,000명 넘게 구매하는 인기템\n\n궁금한 거 댓글로 남겨주세요 💬\n제품 링크 DM으로 보내드릴게요 📩\n저장 🔖 해두고 나중에 사세요!\n\n#비코드 #액상면봉 #귀청소 #위생용품 #템룸",
+  "hashtags_caption": ["#비코드", "#액상면봉", "#귀청소", "#위생용품", "#템룸"],
+  "hashtags_comment": "#비코드면봉 #데일리액상면봉 #원터치면봉 #귀세정 #귀청소면봉 #위생템 #생활템추천 #가성비템 #꿀템 #추천템 #솔직리뷰 #뷰티그램 #데일리템 #쿠팡추천 #쿠팡꿀템 #템룸",
+  "nano_prompts": {
+    "cover": "Generate a photo: A box of B.Chord liquid cotton swabs with a few individually wrapped cotton swabs next to it on a white desk. One cotton swab is snapped open showing the liquid. Casual phone photo, natural lighting. Vertical 9:16.",
+    "scene1": "Generate a photo: A close-up of fingers snapping a cotton swab stick, the moment of breaking the tip to release liquid inside. Action shot, very close up on the fingers and the swab. Casual phone photo, natural lighting. Vertical 9:16.",
+    "scene2": "Generate a photo: A close-up of a wet cotton swab tip glistening with cleaning solution after being snapped open. The cotton tip looks moist and saturated. Clean background, casual phone photo, natural lighting. Vertical 9:16.",
+    "scene3": "Generate a photo: A green box of liquid cotton swabs with several individually wrapped cotton swabs spread out neatly on a white desk. Clean product shot, casual phone photo, natural lighting. Vertical 9:16."
+  }
+}
